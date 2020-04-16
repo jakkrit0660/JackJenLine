@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "jakkrit0660/jackjenline"
-    registryCredential = 'dockerhub'
+    registryCredential = 'DockerHubJack'
     dockerImage = ''
   }
   agent any
