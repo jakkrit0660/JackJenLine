@@ -9,7 +9,7 @@ pipeline {
     stage('Cloning Git'){
       steps{
         script{
-	  git https://github.com/jakkrit0660/JackJenLine.git
+	  git 'https://github.com/jakkrit0660/JackJenLine.git'
         }
       }
     }
