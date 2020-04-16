@@ -6,6 +6,13 @@ pipeline {
   }
   agent any
   stages {
+    stage('Cloning Git'){
+      steps{
+        script{
+	  git https://github.com/jakkrit0660/JackJenLine.git
+        }
+      }
+    }
     stage('Building image') {
       steps{
         script {
