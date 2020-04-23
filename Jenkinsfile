@@ -6,7 +6,7 @@ pipeline {
     PROJECT_ID = 'AppModernize'
     CLUSTER_NAME = 'jenkinstesting'
     LOCATION = 'asia-southeast1-a'
-    CREDENTIALS_ID = 'JackGKE'
+    CREDENTIALS_ID = 'AppModernize'
   }
   agent any
   stages {
