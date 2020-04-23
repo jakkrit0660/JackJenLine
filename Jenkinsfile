@@ -1,4 +1,5 @@
 pipeline {
+  agent any
   environment {
     registry = "jakkrit0660/jackjenline"
     registryCredential = 'DockerHubJack'
@@ -8,7 +9,6 @@ pipeline {
     LOCATION = 'asia-southeast1-a'
     CREDENTIALS_ID = 'AppModernize'
   }
-  agent any
   stages {
     stage('Cloning Git'){
       steps{
