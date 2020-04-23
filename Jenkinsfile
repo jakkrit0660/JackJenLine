@@ -3,6 +3,10 @@ pipeline {
     registry = "jakkrit0660/jackjenline"
     registryCredential = 'DockerHubJack'
     dockerImage = ''
+    PROJECT_ID = 'AppModernize'
+    CLUSTER_NAME = 'JenkinsTesting'
+    LOCATION = 'asia-southeast1-a'
+    CREDENTIALS_ID = 'JackGKE'
   }
   agent any
   stages {
@@ -28,6 +32,11 @@ pipeline {
           }
         }
       }
+    }
+    stage('Deploy to GKE') {
+        steps{
+            step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'Testdeployment.yml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
+        }
     }
   }
 }
