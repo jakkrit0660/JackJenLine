@@ -14,7 +14,7 @@ spec:
                 spec:
                         containers:
                                  - name: jenkinstesting-container
-                                   image: jakkrit0660/jackjenline:$BUILD_NUMBER
+                                   image: jakkrit0660/jackjenline:16
                                    ports: 
                                    - containerPort: 80
 ---
