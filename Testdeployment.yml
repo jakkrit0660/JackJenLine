@@ -25,8 +25,7 @@ metadata:
 spec:
         selector:
                 app: jenkinstesting
-        type: NodePort
+        type: LoadBalancer
         ports:
-                - port: 8000
+                - port: 8080
                   targetPort: 80 
-                  nodePort: 32124
