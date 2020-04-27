@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-        name: Testing-deployment
+        name: testingdeployment
 spec:
         replicas: 1
         selector:
@@ -13,7 +13,7 @@ spec:
                                 app: Jenkinstesting
                 spec:
                         containers:
-                                 - name: Jenkinstesting-container
+                                 - name: jenkinstestingcontainer
                                    image: jakkrit0660/jackjenline:$BUILD_NUMBER
                                    ports: 
                                    - containerPort: 80
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-        name: service-Jenkinstesting
+        name: servicejenkinstesting
 spec:
         selector:
                 app: Jenkinstesting
