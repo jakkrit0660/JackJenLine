@@ -7,7 +7,7 @@ pipeline {
     PROJECT_ID = 'AppModernize'
     CLUSTER_NAME = 'jenkinstesting'
     LOCATION = 'asia-southeast1-a'
-    CREDENTIALS_ID = 'AppModernize'
+    CREDENTIALS_ID = 'appmodernize'
   }
   stages {
     stage('Cloning Git'){
