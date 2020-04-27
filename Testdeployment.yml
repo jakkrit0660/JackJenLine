@@ -1,19 +1,19 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-        name: testingdeployment
+        name: testing-deployment
 spec:
         replicas: 1
         selector:
                 matchLabels:
-                        app: Jenkinstesting
+                        app: jenkinstesting
         template:
                 metadata:
                         labels:
-                                app: Jenkinstesting
+                                app: jenkinstesting
                 spec:
                         containers:
-                                 - name: jenkinstestingcontainer
+                                 - name: jenkinstesting-container
                                    image: jakkrit0660/jackjenline:$BUILD_NUMBER
                                    ports: 
                                    - containerPort: 80
@@ -21,11 +21,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-        name: servicejenkinstesting
+        name: service-jenkinstesting
 spec:
         selector:
-                app: Jenkinstesting
-        type: LoadBalancer
+                app: jenkinstesting
+        type: NodePort
         ports:
-                - port: 8080
+                - port: 8000
                   targetPort: 80 
+                  nodePort: 32124
