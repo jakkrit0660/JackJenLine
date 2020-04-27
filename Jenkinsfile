@@ -4,7 +4,7 @@ pipeline {
     registry = "jakkrit0660/jackjenline"
     registryCredential = 'DockerHubJack'
     dockerImage = ''
-    PROJECT_ID = 'AppModernize'
+    PROJECT_ID = 'appmodernize'
     CLUSTER_NAME = 'jenkinstesting'
     LOCATION = 'asia-southeast1-a'
     CREDENTIALS_ID = 'appmodernize'
