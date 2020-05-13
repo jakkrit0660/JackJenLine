@@ -15,6 +15,7 @@ spec:
                         containers:
                                  - name: jenkinstesting-container
                                    image: jakkrit0660/jjpipeline:latest
+                                   imagePullPolicy: Always
                                    ports: 
                                    - containerPort: 80
 ---
