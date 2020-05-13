@@ -36,7 +36,8 @@ pipeline {
     }
     stage('Deploy to GKE') {
         steps{
-            step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'Testdeployment.yml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: false])
+            sh "sed -i 's/jjpipeline:latest/jjpipeline:$BUILD_NUMBER/g' Testdeployment.yml"
+            step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'Testdeployment.yml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
         }
     }
   }
