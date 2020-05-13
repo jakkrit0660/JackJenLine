@@ -14,7 +14,7 @@ spec:
                 spec:
                         containers:
                                  - name: jenkinstesting-container
-                                   image: jakkrit0660/jackjenline:latest
+                                   image: jakkrit0660/jjpipeline:latest
                                    ports: 
                                    - containerPort: 80
 ---
