@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    registry = "jakkrit0660/jackjenline"
+    registry = "jakkrit0660/jjpipeline"
     registryCredential = 'DockerHubJack'
     dockerImage = ''
     PROJECT_ID = 'appmodernize'
